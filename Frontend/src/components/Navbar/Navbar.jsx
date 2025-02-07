@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav className='flex items-center justify-between' > 
         <div className='text-white'>
-          <img src='src/assets/Dev.png' alt='sexy boiii' className='w-28 m-9'/>
+          <img src='src/assets/Dev.png' alt='logo' className='w-28 m-9'/>
         </div>
         <div className='text-white gap-4 justify-between flex items-center p-4 text-2xl m-6'>
           <FaLinkedin />

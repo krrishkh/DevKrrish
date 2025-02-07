@@ -9,6 +9,9 @@ function Contact() {
        <p className='text-center text-white tracking-tight font-thin '> 
           Hall-3, IIT Kanpur
        </p>
+       <p className='text-center text-white tracking-tight font-thin '>
+          +91 9982098021
+       </p>
     </div>
   )
 }
