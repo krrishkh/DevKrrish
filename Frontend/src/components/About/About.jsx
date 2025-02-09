@@ -28,9 +28,8 @@ function About() {
                           whileInView={{ x: 0, opacity: 1}}
                           initial= {{ x: 100, opacity:0}}
                           transition={{duration: 1, delay: 0.5}} 
-                          className='font-thin text-2xl tracking-tight my-2 max-w-xl '>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi et amet repellendus veniam eligendi quis minima nobis iure nihil omnis cumque, dolorem velit maxime incidunt inventore asperiores fugit optio aliquam.
-                        </motion.p>
+                          className='font-thin text-xl tracking-tight my-2 max-w-xl mt-32 '>
+                            I am very passionate about technology and problem-solving. As a pre-final year B.Tech student at IIT Kanpur, I enjoy building scalable applications and exploring new innovations. With experience in developing web platforms and optimizing systems, I focus on creating impactful solutions. Always eager to learn and take on new challenges </motion.p>
                     </div>
                 </div>
             </div>

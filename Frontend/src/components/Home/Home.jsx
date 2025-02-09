@@ -41,9 +41,7 @@ function Home() {
                 initial= "hidden"
                 animate="visible" 
                 className='mt-4 tracking-tight font-thin text-white lg:w-4/5 '>
-                I am very Passionate. what about you?
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem iusto impedit velit placeat asperiores itaque sapiente incidunt vitae dolore praesentium quas doloremque, provident nam fuga quo, libero, quidem ab ex.
-              </motion.p>
+                I am very passionate about Full-Stack Development, specializing in React, Node.js, and MongoDB. I love building scalable web applications with seamless user experiences and efficient backends. From video hosting platforms to product management systems, I focus on performance, security, and real-time functionality. Always eager to learn and take on new challenges!</motion.p>
               <motion.a 
                 variants={container(3)}
                 initial= "hidden"
@@ -58,7 +56,7 @@ function Home() {
             </div> 
         </div>
         <div className=' w-full lg:w-1/3 '> 
-           <div className='flex justify-center '>
+           <div className='flex justify-center  '>
               <motion.img 
                 initial= {{ x: 100, opacity:0}}
                 animate={{ x: 0, opacity: 1}}
