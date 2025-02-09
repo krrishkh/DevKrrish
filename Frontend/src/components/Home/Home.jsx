@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from "motion/react"
 import { pandaImage } from '../../assets/Images'
+import { TbFileCv } from "react-icons/tb";
 
 
 const container = (delay)=>({
@@ -43,6 +44,17 @@ function Home() {
                 I am very Passionate. what about you?
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem iusto impedit velit placeat asperiores itaque sapiente incidunt vitae dolore praesentium quas doloremque, provident nam fuga quo, libero, quidem ab ex.
               </motion.p>
+              <motion.a 
+                variants={container(3)}
+                initial= "hidden"
+                animate="visible" 
+                className='text-white font-thin tracking-tight mt-11 hover:text-cyan-500 '
+                href='https://drive.google.com/file/d/1Msq3cCHf6ayHd1LhGCy8nlvd54dgD9St/view?usp=sharing'
+                target='blank'
+                >
+                Want to see My Resume ?
+                <TbFileCv />
+              </motion.a>
             </div> 
         </div>
         <div className=' w-full lg:w-1/3 '> 

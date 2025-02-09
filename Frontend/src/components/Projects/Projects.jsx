@@ -3,7 +3,7 @@ import { PROJECTS } from '../../constants/Projects/projects'
 
 function Projects() {
   return (
-    <div className='border-b border-neutral-900 pb-4 ' >
+    <div className=' border-neutral-900 pb-4 ' >
         <h1 className='my-20 text-center text-4xl text-white tracking-tight font-thin '>
             Projects
         </h1>
@@ -22,7 +22,7 @@ function Projects() {
                     <h6 className='mb-2 font-semibold text-gray-600'>
                         {project.title} 
                     </h6>
-                    <p className='mb-4 text-neutral-400 '>
+                    <p className='mb-4 text-neutral-400 font-thin '>
                         {project.description}
                     </p>
                     {project.technologies.map((tech, index) =>

@@ -6,7 +6,8 @@ import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { TbBrandJavascript } from "react-icons/tb";
 import { motion } from 'motion/react';
-
+import { FaPython } from "react-icons/fa";
+import { DiMysql } from "react-icons/di";
 
 const iconVariant = (duration) => ({
     initial: {y:-10},
@@ -33,7 +34,7 @@ function Technologies() {
                 initial="initial"
                 animate="animate"
                 className='rounded-2xl border-4 border-neutral-800 p-4 '>
-                <DiNodejs  className="text-7xl text-cyan-500" />
+                <FaPython  className="text-7xl text-blue-500" />
             </motion.div>
             <motion.div 
                 variants={iconVariant(3.5)}
@@ -75,7 +76,7 @@ function Technologies() {
                 initial="initial"
                 animate="animate" 
                 className='rounded-2xl border-4 border-neutral-800 p-4 '>
-                <RiReactjsLine className="text-7xl text-cyan-500" />
+                <DiMysql className="text-7xl text-cyan-500" />
             </motion.div>
         </div>
     </div>
