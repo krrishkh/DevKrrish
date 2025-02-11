@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from "motion/react"
 import { pandaImage } from '../../assets/Images'
 import { TbFileCv } from "react-icons/tb";
+import { Link } from 'react-router-dom';
 
 
 const container = (delay)=>({
@@ -56,12 +57,16 @@ function Home() {
             </div> 
         </div>
         <div className=' w-full lg:w-1/3 '> 
-           <div className='flex justify-center  '>
+           <div className='flex justify-center '>
+            <Link to="/valentinesday">
               <motion.img 
                 initial= {{ x: 100, opacity:0}}
                 animate={{ x: 0, opacity: 1}}
                 transition={{duration: 1, delay: 1.5}} 
-                src={pandaImage} alt='cool panda'/>
+                src={pandaImage} alt='cool panda'
+                className="cursor-pointer hover:scale-110 transition-transform duration-300"
+               />
+              </Link>
            </div>
             
         </div>
