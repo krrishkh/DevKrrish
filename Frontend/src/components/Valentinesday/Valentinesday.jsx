@@ -1,50 +1,89 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import { teriOre } from '../../assets/Audio';
-import { useRef, useEffect } from 'react';
+import Yes from '../Yes/Yes';
 
+// Import songs correctly
+import teriOre from '../../assets/Audio/teriOre.mp3';
+import subhanallah from '../../assets/Audio/subhanallah.mp3';
+import titli from '../../assets/Audio/titli.mp3';
 
 export default function Valentinesday() {
+    const songs = [teriOre, subhanallah, titli]; // Array of songs
+    const [currentSongIndex, setCurrentSongIndex] = useState(0);
+    const [showYes, setShowYes] = useState(false);
     const audioRef = useRef(null);
 
     useEffect(() => {
-      // Play music when the component is mounted
-      if (audioRef.current) {
-        audioRef.current.play();
-      }
-    }, []);
+        if (audioRef.current) {
+            try {
+                audioRef.current.play();
+            } catch (error) {
+                console.warn("Autoplay blocked by browser:", error);
+            }
+        }
+    }, [currentSongIndex]);
 
-  return (
-    <div>
-        <DotLottieReact
-            src="https://lottie.host/bfa3e7ad-d44f-4137-8d4d-3427ee8a79cc/oRT2Gn1K5K.lottie"
-            loop
-            autoplay
-        />
+    const changeSong = () => {
+        setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
+    };
 
-         {/* Hidden Audio Element */}
-            <audio ref={audioRef} src={teriOre} loop />
+    if (showYes) {
+        return <Yes />; // Renders the Yes component when "Yes" is clicked
+    }
 
-            <h1 className="text-3xl font-bold mt-4 text-red-600 text-center">Happy Valentine's Day! ❤️</h1>
-            <p className="text-lg text-gray-700 text-center">Enjoy the moment with this beautiful animation and music.</p>
+    return (
+        <div className="flex flex-col items-center justify-center min-h-screen mb-16">
+            {/* Valentine's Animation */}
+            <DotLottieReact
+                src="https://lottie.host/bfa3e7ad-d44f-4137-8d4d-3427ee8a79cc/oRT2Gn1K5K.lottie"
+                loop
+                autoplay
+            />
 
-            {/* Stop Music Button (Optional) */}
-            <div className='flex justify-center mb-16 gap-5'>
+            {/* Hidden Audio Element */}
+            <audio ref={audioRef} src={songs[currentSongIndex]} loop />
+
+            <h1 className="text-3xl font-bold mt-4 text-red-600 text-center mb-6">
+                Will you be my Valentine! ❤️ 🥹
+            </h1>
+
+            {/* Yes/No Buttons */}
+            <div className='flex gap-4'>
                 <button
-                className="mt-4 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-700 "
-                onClick={() => audioRef.current.pause()}
+                    onClick={() => setShowYes(true)}
+                    className="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600 transition"
                 >
-                Stop Music
+                    Yes
                 </button>
                 <button
-                className="mt-4 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-700 "
-                onClick={() => audioRef.current.play()}
+                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                    onClick={() => alert("🥲 Areeeee... Think Again.. Mere Jaisa green flag nahi milega😌")}
                 >
-                Play Again
+                    No
                 </button>
             </div>
-    </div>
-  )
+
+            {/* Music Controls */}
+            <div className='flex justify-center mt-6 gap-5'>
+                <button
+                    className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
+                    onClick={() => audioRef.current.pause()}
+                >
+                    Stop Music ⏸️
+                </button>
+                <button
+                    className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
+                    onClick={() => audioRef.current.play()}
+                >
+                    Play Again ▶️
+                </button>
+                <button
+                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                    onClick={changeSong}
+                >
+                    Change Song 🔄
+                </button>
+            </div>
+        </div>
+    );
 }
-
-
