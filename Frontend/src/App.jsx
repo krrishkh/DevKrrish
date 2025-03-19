@@ -33,7 +33,6 @@ function App() {
           <Navbar/>
           <Routes>
           <Route path="/" element={<MainContent />} />
-          
           <Route path="/valentinesDay" element={<Valentinesday/>}/>
           </Routes>
         </div>

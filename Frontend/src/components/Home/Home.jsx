@@ -58,7 +58,7 @@ function Home() {
         </div>
         <div className=' w-full lg:w-1/3 '> 
            <div className='flex justify-center '>
-            <Link to="/valentinesday">
+            <Link to="#">
               <motion.img 
                 initial= {{ x: 100, opacity:0}}
                 animate={{ x: 0, opacity: 1}}
