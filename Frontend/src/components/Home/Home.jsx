@@ -48,7 +48,7 @@ function Home() {
                 initial= "hidden"
                 animate="visible" 
                 className='text-white font-thin tracking-tight mt-11 hover:text-cyan-500 '
-                href='https://drive.google.com/file/d/1Msq3cCHf6ayHd1LhGCy8nlvd54dgD9St/view?usp=sharing'
+                href='https://drive.google.com/file/d/1lXtZq695w2VAMK0oIeh1Nrg1zEXtrLEU/view?usp=sharing'
                 target='blank'
                 >
                 Want to see My Resume ?

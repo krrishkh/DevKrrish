@@ -1,8 +1,18 @@
 import TimeSeriesPic from "../../constants/Projects/TimeSeriesPic.png";
 import CricketShotPic from "../../constants/Projects/CricketShotPic.avif";
 import BackendPic from "../../constants/Projects/BackendPic.webp"
+import IITKReSalePic from "../../constants/Projects/IITKResalePic.png"
 
 export const PROJECTS = [
+
+    {
+      title: "IITK Resale",
+      image: IITKReSalePic,
+      description: "Developed a full-stack web application for IIT Kanpur's student community to buy and sell used items. Implemented features like user authentication, item listing, and real-time chat using React, Node.js, and MongoDB, ensuring scalability and security.",
+      technologies: ["React", "Node.js", "MongoDB", "Express"], 
+      link: "https://github.com/krrishkh/IITK-Resale"
+
+    },
     {
       title: "Forecasting Using Time Series",
       image: TimeSeriesPic,
@@ -22,7 +32,7 @@ export const PROJECTS = [
       image: BackendPic,
       description: "Developed a secure and scalable backend for a YouTube-like platform using Node.js, Express.js, and MongoDB. Implemented authentication with JWT, integrated Cloudinary for media storage, and hosted on Krutrium, enabling features like video upload, comments, likes, and subscriptions.",
       technologies: ["JavaScript","Express", "Node.js", "MongodB"],
-      link: "https://github.com/yourusername/product-management"
+      link: "https://github.com/krrishkh/Video-stream-Backend"
     }
   ];
   
