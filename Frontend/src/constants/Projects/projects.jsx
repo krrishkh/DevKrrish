@@ -1,7 +1,7 @@
 import TimeSeriesPic from "../../constants/Projects/TimeSeriesPic.png";
 import CricketShotPic from "../../constants/Projects/CricketShotPic.avif";
-import BackendPic from "../../constants/Projects/BackendPic.webp"
-import IITKReSalePic from "../../constants/Projects/IITKResalePic.png"
+import BackendPic from "../../constants/Projects/BackendPic.webp";
+import IITKReSalePic from "../../constants/Projects/IITKResalePic.png";
 
 export const PROJECTS = [
 
